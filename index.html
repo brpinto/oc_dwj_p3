@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Vélo'V</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+</head>
+<body>
+	<div id="bloc-page">
+		<header id="main-header" class="shadow">
+			<div id="title-container">
+				<h1>Réservation de vélo à Lyon</h1>
+				<img src="../img/Logo_Velov.gif" alt="logo vélo'v lyon" class="logo">
+			</div>
+			<nav id="main-menu" class="menu">
+				<button id="reservation" class="nav-button button-map">Carte</button>
+				<button id="aide" class="nav-button button-help">Aide</button>
+			</nav>
+			<button id="icon" class="menu-icon">&#9776</button>
+		</header>
+		<section id="content-container">
+			<div id="main-content">
+				<section id="slider-wrap">
+					<div id="slider">
+						<section class="slide">
+							<article class="slide-pannel">
+								<h2>Bienvenue sur Vélo'V</h2>
+								<p>Vélo'V est un service qui vous permet simplement de réserver un vélo à Lyon.</p>
+								<ol>
+									<li><p>Pour naviguer dans le diaporama, utilisez les <mark>boutons de navigations, ou les flêches de votre clavier</mark>.</p></li>
+									<li><p>Vous pouvez accéder à la carte ou revenir au diaporama en cliquant sur les bouton "Carte" et "Aide" du <mark>menu</mark></p></li>
+								</ol>
+							</article>
+						</section>
+						<section class="slide">
+							<article class="slide-pannel">
+								<h2>Trouver une sation ou un vélo</h2>
+								<p>Pour trouver où déposer, ou récupérer un vélo, c'est simple.</p>
+								<ol>
+									<li><p>Des <mark>marqueurs de groupe</mark> vous indiquent un groupe de stations qui se trouvent à proximité les unes des autres. Vous pouvez cliquer dessus pour zoomer, et découvrir ces stations.</p></li>
+									<li><p>Si une localisation vous intéresse, il vous suffit de cliquer sur le <mark>marqueur rouge</mark> pour avoir des informations sur la station correspondante.</p>
+									<p>Si vous voulez changer de station, fermez la "fenêtre" d'information en cliquant sur le bouton "fermer".</p></li>
+								</ol>
+							</article>
+						</section>
+						<section class="slide">
+							<article class="slide-pannel slide-pannel-reservation">
+								<h2>Réserver un vélo</h2>
+								<p>Vous y êtes presque !</p>
+								<ol>
+									<li><p>Pour permettre la réservation d'un vélo, <mark>signez</mark> dans le cadre prévu à cet effet. Pas de panique, si le cadre ne s'affiche pas, regardez bien, aucun vélo n'est diponible ;)</p></li>
+									<li><p>Pour démarrer votre réservation, cliquez sur le bouton <mark>"Réserver"</mark>. La réservation est confirmée dans le pied de page. <mark>Félicitations</mark>, ce vélo est à vous ! Vous n'avez plus qu'à aller le chercher dans les <mark>20 prochaines minutes</mark>, avant que votre réservation ne s'annule. Alors ne trainez pas :)</p></li>
+								</ol>
+							</article>
+						</section>
+					</div>
+					<nav id="slider-nav">
+						<div class="slider-nav-button button-left">&lsaquo;</div>
+						<div class="slider-nav-button button-right">&rsaquo;</div>
+					</nav>
+				</section>
+				<section id="map-container">
+					<section id="station-info-layer">
+						<aside id="station-info">
+							<header id="station-info-header">
+								<h2 id="station-name"></h2>
+							</header>
+							<section id="station-info-body">
+								<ul>
+									<li>
+										<h3>Adresse</h3>
+										<p id="station-address"></p>
+									</li>
+									<li>
+										<h3>Les vélos</h3>
+										<p id="stands-av"></p>
+										<p id="bikes-av"></p>
+									</li>
+								</ul>
+								</script>
+								<canvas id="signature" width="220" height="120"></canvas>
+							</section>
+							<footer id="station-info-footer">
+								<nav id="info-nav">
+									<button class="info-nav-button close">Fermer</button>
+									<button class="info-nav-button book">Réserver</button>
+								</nav>
+							</footer>
+						</aside>
+					</section>
+					<div id="map">
+					</div>
+				</section>
+			</div>
+		</section>
+		<footer id="main-footer" class="shadow">
+			<div id="copyright">
+				<p>© Copyright 2018 - Ville de Lyon</p>
+			</div>
+
+			<div id="reservation">
+				<p id="book-alert"></p>
+				<p id="test-countdown"></p>
+			</div>
+
+			<a href="#" id="mention-legales">Mentions Légales</a>
+		</footer>
+	</div>
+	<script src="js/ajax.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/canvas.js"></script>
+	<script src="js/booking.js"></script>
+	<script src="js/station.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/markerclusterer.js"></script>
+	<script src="js/App.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOvXWMPjFstA8Zz4PaozZVJIAmxP6LUtU&callback=GoogleMap.init" async defer ></script>
+</body>
+</html>
+
